@@ -1,3 +1,7 @@
+//	功能：String Format
+//	作者：mmc
+//	日期：2017/10/18
+
 #pragma once
 
 #include <tuple>
