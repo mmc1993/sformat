@@ -11,8 +11,12 @@ This is a super lightweight C++ String Format implementation
 
 
 //  c++ code
+
+
 auto str = SFormat("hello world, {0}, {0}, {1}, {2}, {3}", 123, 1.23, "123", std::string("123"));
 
 
 //  output:
+
+
 hello world, 123, 123, 1.23, 123, 123
