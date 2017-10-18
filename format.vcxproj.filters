@@ -23,5 +23,8 @@
     <ClInclude Include="src\format.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="src\sformat.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
