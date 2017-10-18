@@ -73,13 +73,13 @@ std::string SFormat(const char * fmt, const ARGS &...args)
 	return SFormatN<sizeof...(args)>::Format(fmt, tuple);
 }
 
-#define FMT_N(idx)	case idx: ToString(ret, std::get<idx>(tuple)); break;
+#define FMT_N(idx)	case idx: ToString(ret, std::get<idx>(args)); break;
 
 #define FMT_PARSE(N, ...)															\
 template <>																			\
 struct SFormatN<N> {																\
 	template <class... ARGS>														\
-	static std::string Format(const char * fmt, const std::tuple<ARGS...> & tuple)	\
+	static std::string Format(const char * fmt, const std::tuple<ARGS...> & args)	\
 	{	std::string ret;															\
 		while (*fmt != '\0') { auto idx = -1;										\
 			if (*fmt == '{') { idx = 0; ++fmt;										\
