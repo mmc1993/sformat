@@ -8,14 +8,6 @@
 #include <string>
 #include <algorithm>
 
-namespace std {
-template <class T>
-std::string to_string(T && val)
-{
-    static_assert(false);
-}
-}
-
 template <class T>
 inline void ToString(std::string & ret, T && val)
 {
